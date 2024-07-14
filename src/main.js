@@ -1,4 +1,6 @@
-import { createApp } from 'vue'
+import { createApp, reactive } from 'vue'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+const GStore = reactive({ errorMessage: '' })
+
+createApp(App).provide('GStore', GStore).mount('#app')
